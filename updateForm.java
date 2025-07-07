@@ -68,7 +68,7 @@ public class updateForm extends check{
 
         user = null;
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative", "root", "Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative", "root", "Admin");
             Statement stn = conn.createStatement();
             String qryUp = "UPDATE customer_data SET first_name = ?, last_name = ?, address = ?, phone_number = ?, age = ? WHERE customer_id=?";
 
@@ -102,7 +102,7 @@ public class updateForm extends check{
 
     public void showExistingData(){
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             Statement stn = conn.createStatement();
             String qry="SELECT *FROM customer_data";
             ResultSet rs= stn.executeQuery(qry);
