@@ -62,7 +62,7 @@ public class regForm extends JDialog{
     private User addUsers(String first_name, String last_name, String Address, String phone_number, String age, String loan, String interest, String monthly_deposit,String paid_amount, String remaining_amount){
         User user = null;
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             System.out.println("Connection established successfully");
             String sql = "INSERT INTO customer_data (first_name,last_name,address,phone_number,age,loan,interest,interest_to_pay,total_paid_amount,remaining_amount)"+"VAlUES(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
