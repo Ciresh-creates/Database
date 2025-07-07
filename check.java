@@ -28,7 +28,7 @@ public class check extends JFrame{
 
     public void checkId(){
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             Statement stn = conn.createStatement();
             String qry = "SELECT * FROM customer_data";
             ResultSet rs = stn.executeQuery(qry);
