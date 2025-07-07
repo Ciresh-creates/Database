@@ -6,7 +6,7 @@ public class transactionDetails {
 
     transactionDetails(){
         try{
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
         String qry = "";
         Statement stn = conn.createStatement();
 
