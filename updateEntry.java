@@ -14,7 +14,7 @@ public class updateEntry extends check{
 
     float  remaining_amt, tot_paid_amt, interest, interest_to_pay;public void showExistingData(){
         try{
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             Statement stn = conn.createStatement();
             String qry="SELECT *FROM customer_data";
             ResultSet rs= stn.executeQuery(qry);
@@ -63,7 +63,7 @@ public class updateEntry extends check{
 
         //creating connection with database
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             Statement stn = conn.createStatement();
             String qry = "SELECT remaining_amount, total_paid_amount, interest FROM customer_data";
             ResultSet rs = stn.executeQuery(qry);
@@ -114,7 +114,7 @@ public class updateEntry extends check{
     private User updateData(String interest_to_pay,String total_paid_amount,String remaining_amount,String u_id){
         user=null;
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Appletomypie99");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/coorporative","root","Admin");
             Statement stn = conn.createStatement();
             String qry ="UPDATE customer_data SET interest_to_pay=?, total_paid_amount=?, remaining_amount=? WHERE customer_id=?";
 
